@@ -196,8 +196,9 @@ form button {
     margin-left: 10px;
 }
 .items {
-    display: flex;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
     margin: 3px 30px;
     margin-top: 5px;
 }
@@ -373,64 +374,90 @@ form button {
 
 
 /* contact */
-.contact-back :nth-child(2){
-    font-size: 50px;
-    position: relative;
-    bottom: 200px;
-    left: 550px;
-    width: 60%;
-  }
-  
-  .moro{
-  display: grid;
-  grid-template-columns: 50% 50%;
-  }
-  .morox1 img{
-   position: relative;
-   left: 150px;
-  }
-  .ouradress{
-    border: 2px solid black;
-    position: relative;
-    left: 130px;
+.contact {
     text-align: center;
-    width: 50%;
+    margin-top: 10px;  
+}
+.email-us {
+    display: flex;
+    margin-left: 10px;
+    gap: 20px;
+    justify-content: space-around;
+}
+.ouradress{
     background-color: black;
-    padding: 10px;
-  }
-  .ouradress :nth-child(1){
-    color: white;
-  }
-  .ouradress :nth-child(2){
-    width: 25px;
-    position: absolute;
-    left: 20px;
-    top: 20px;
-  }
-  .input1{
-    background-color: #b7b7b7;
-    width: 354px;
-    height: 45px;
-    border: 2px solid black;
-  }
-  .input2{
-    background-color:#b7b7b7 ;
-    width: 354px;
-    height: 45px;
-    border:2px solid black ;
-  }
-  .input3{
-    background-color:#b7b7b7 ;
-    width: 354px;
-    height: 95px;
-    border:2px solid black ;
-  
-  }
-  .tnt1{
-    margin: 10px;
-    margin-right: 100px;
-  }
+    border-radius: 3px;
+}
+.ouradress span {
+    color: #fff;
+    text-align: center;
+}
+.casex1 {
+    width: 280px;
+    height: 20px;
+    background-color: rgb(231, 231, 231);
+    border: 1px solid black ;
+}
+.casexd {
+    width: 280px;
+    height: 60px;
+    background-color: rgb(231, 231, 231);
+    border: 1px solid black ;
+}
+.casex11 {
+    margin-top: 10px;
+    background-color: black;
+    border: 1px solid black ;
+    color: #fff;
+    width: 100px;
+    height: 35px;
+    border-radius: 3px;
+    text-align: center;
+    justify-self: center;
+}
 
+
+.contact {
+    text-align: center;
+    margin-top: 10px;  
+}
+.email-us {
+    display: flex;
+    margin-left: 10px;
+    gap: 20px;
+    justify-content: space-around;
+}
+.ouradress{
+    background-color: black;
+    border-radius: 3px;
+}
+.ouradress span {
+    color: #fff;
+    text-align: center;
+}
+.casex1 {
+    width: 280px;
+    height: 20px;
+    background-color: rgb(231, 231, 231);
+    border: 1px solid black ;
+}
+.casexd {
+    width: 280px;
+    height: 60px;
+    background-color: rgb(231, 231, 231);
+    border: 1px solid black ;
+}
+.casex11 {
+    margin-top: 10px;
+    background-color: black;
+    border: 1px solid black ;
+    color: #fff;
+    width: 100px;
+    height: 35px;
+    border-radius: 3px;
+    text-align: center;
+    justify-self: center;
+}
 /* cart */
   #princip_sec {
     display: flex;
@@ -440,7 +467,7 @@ form button {
   .princip_bord {
     margin-top: 5%;
     border: solid 2px #d9d9d9;
-    width: 700px;
+    width: 500px;
     height: 400px;
   }
   .princip_bord input {
@@ -581,7 +608,74 @@ form button {
     margin-left: 20px;
     margin-bottom: 10px;
   }
-  @media screen and (max-width: 720px) {
+  .section-group {
+    display: flex;
+    width: 80%;
+  }
+  .three-sections {
+    display: flex;
+    max-width: 98vw;
+    gap: 20rem;
+  }
+
+  @media screen and (max-width: 1300px) {
+    .three-sections {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+        gap: 0rem;
+      }
+  }
+
+  @media screen and (max-width: 1000px) {
+      .section-group {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+      .main-picture {
+    width: 28rem !important;
+      }
+  }
+  @media screen and (max-width: 500px) {
+      .sectionx3 {
+        margin-left: 39px;
+        max-width: 30rem;
+        padding: 0rem 1rem;
+      }
+    .items {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .dclx {
+        margin-left: 10px;
+    }
+    
+    .reviewsmessi {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        flex-direction: column !important;
+        padding: 0rem 1rem;
+    }
+    .jfree-nokta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .keyboardsort {
+        margin-left: 30px;
+    } 
+    .cards_group {
+        grid-template-columns: repeat(2, 45%);
+    }
+    .pricing {
+        display: none;
+    }
 .amazon a {
     width: 50px;
 }
@@ -985,6 +1079,9 @@ margin-top: 20px;
     .image-filter-acces{
         display: block;
     }
+    .email-us{
+        flex-wrap: wrap;
+    }
     .account, form, .accessoiries{
         display: none;
     }
@@ -997,5 +1094,17 @@ margin-top: 20px;
     }
     .items ,.barx {
         display: grid;
+    }
+    .cards_group {
+        grid-template-columns: 1fr;
+    }
+    .keyboardsort {
+        margin-left: 20px;
+    }
+    .items {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(1, 1fr);
     }
 }
